@@ -1,8 +1,6 @@
-SELECT
-    name,
-    count(animal_id) as count
+select name, count(*) count
 from animal_ins
 where name is not null
 group by name
-having count(animal_id) >=2
+having count(*)>=2
 order by name
